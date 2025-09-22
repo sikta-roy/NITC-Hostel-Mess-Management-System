@@ -5,6 +5,7 @@ Sikta Roy
 
 ## Team Contributions
 - Setup for Sikta Roy completed on September 22, 2025. Ready for the challenge!
+- Setup for Vengidesan K completed on September 22, 2025. Ready for the challenge!
 
 This is a line by Sikta Roy
 
