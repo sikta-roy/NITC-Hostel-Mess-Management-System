@@ -5,7 +5,8 @@ import connectDB from './config/db.js';
 import authRoutes from './routes/authRoutes.js';
 import menuRoutes from './routes/menuRoutes.js';
 import attendanceRoutes from './routes/attendanceRoutes.js';
-import feedbackRoutes from './routes/feedbackRoutes.js';  // Add this
+import feedbackRoutes from './routes/feedbackRoutes.js';
+import billRoutes from './routes/billRoutes.js';  // Add this
 
 dotenv.config();
 connectDB();
@@ -20,7 +21,8 @@ app.use(express.urlencoded({ extended: true }));
 app.use('/api/auth', authRoutes);
 app.use('/api/menu', menuRoutes);
 app.use('/api/attendance', attendanceRoutes);
-app.use('/api/feedback', feedbackRoutes);  // Add this
+app.use('/api/feedback', feedbackRoutes);
+app.use('/api/bills', billRoutes);  // Add this
 
 app.get('/', (req, res) => {
   res.json({ message: 'NITC Mess Management API is running' });
