@@ -3,7 +3,8 @@ import dotenv from 'dotenv';
 import cors from 'cors';
 import connectDB from './config/db.js';
 import authRoutes from './routes/authRoutes.js';
-import menuRoutes from './routes/menuRoutes.js';  // Add this
+import menuRoutes from './routes/menuRoutes.js';
+import attendanceRoutes from './routes/attendanceRoutes.js';  // Add this
 
 dotenv.config();
 connectDB();
@@ -16,7 +17,8 @@ app.use(express.urlencoded({ extended: true }));
 
 // Routes
 app.use('/api/auth', authRoutes);
-app.use('/api/menu', menuRoutes);  // Add this
+app.use('/api/menu', menuRoutes);
+app.use('/api/attendance', attendanceRoutes);  // Add this
 
 app.get('/', (req, res) => {
   res.json({ message: 'NITC Mess Management API is running' });
