@@ -3,8 +3,8 @@
 # Dependencies and lock files
 # These folders can be huge and should be installed by each developer locally.
 /node_modules
-/client/node_modules
-/server/node_modules
+/client/node_modules/
+/server/node_modules/
 npm-debug.log
 yarn.lock
 pnpm-lock.yaml
