@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import loginImg from "../assets/login-illustration.png";
+import MyLogo from "../assets/logo.png";
 
 export default function SignIn() {
   const navigate = useNavigate();
@@ -65,15 +66,10 @@ export default function SignIn() {
         <div className="p-8 sm:p-12">
           {/* Brand */}
           <div className="mb-10 flex items-center gap-3">
-            <img
-              src="/src/assets/logo.png"
-              alt="NITC Mess"
-              className="h-8 w-8 object-contain"
-            />
-            <span className="text-lg font-semibold tracking-tight text-neutral-800">
-              NITC Mess
-            </span>
-          </div>
+                      <img src={MyLogo} alt="NITC Mess" className="h-8 w-8 object-contain" />
+                      <span className="text-lg font-semibold tracking-tight text-neutral-800">NITC Mess </span>
+                    </div>
+         
 
           <h1 className="text-4xl font-bold tracking-tight">Welcome Back</h1>
           <p className="text-neutral-600 mt-2">
