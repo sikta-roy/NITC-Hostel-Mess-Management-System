@@ -6,14 +6,18 @@ import authRoutes from './routes/authRoutes.js';
 import menuRoutes from './routes/menuRoutes.js';
 import attendanceRoutes from './routes/attendanceRoutes.js';
 import feedbackRoutes from './routes/feedbackRoutes.js';
-import billRoutes from './routes/billRoutes.js';  // Add this
+import billRoutes from './routes/billRoutes.js';  
 
 dotenv.config();
 connectDB();
 
 const app = express();
 
-app.use(cors());
+
+app.use(cors({
+  origin: "https://nitc-mess-frontend-flax.vercel.app",
+  credentials: true,
+}));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
