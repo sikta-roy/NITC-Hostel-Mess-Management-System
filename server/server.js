@@ -14,10 +14,23 @@ connectDB();
 const app = express();
 
 
+
+const allowedOrigins = [
+  "https://nitc-mess-frontend-flax.vercel.app", // your deployed frontend
+];
+
 app.use(cors({
-  origin: "https://nitc-mess-frontend-flax.vercel.app",
+  origin: function (origin, callback) {
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error("Not allowed by CORS"));
+    }
+  },
   credentials: true,
 }));
+
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
