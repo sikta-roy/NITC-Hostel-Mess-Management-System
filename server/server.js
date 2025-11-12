@@ -17,7 +17,7 @@ connectDB();
 const app = express();
 
 app.use(cors({
-  origin: "nitc-mess-frontend-flax.vercel.app", // your frontend URL
+  origin: "https://nitc-mess-frontend-flax.vercel.app", // your frontend URL
   credentials: true, // allow cookies, authorization headers, etc.
 }));
 app.use(express.json());
@@ -55,4 +55,5 @@ const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
+
 
