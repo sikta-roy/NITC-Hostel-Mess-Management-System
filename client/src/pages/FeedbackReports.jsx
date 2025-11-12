@@ -42,7 +42,7 @@ export default function FeedbackAnalytics() {
         const m = parseInt(monthStr, 10);
 
         const response = await axios.get(
-          `http://localhost:5000/api/feedback/statistics?month=${m}&year=${year}`,
+          `${import.meta.env.VITE_SERVER_URL}/api/feedback/statistics?month=${m}&year=${year}`,
           { headers: { Authorization: `Bearer ${token}` } }
         );
         setAnalytics(response.data.data);
@@ -74,7 +74,7 @@ export default function FeedbackAnalytics() {
         await Promise.all(
           mealTypes.map(async (meal) => {
             const res = await axios.get(
-              `http://localhost:5000/api/feedback/mess?mealType=${meal}&startDate=${start}&endDate=${end}`,
+              `${import.meta.env.VITE_SERVER_URL}/api/feedback/mess?mealType=${meal}&startDate=${start}&endDate=${end}`,
               { headers: { Authorization: `Bearer ${token}` } }
             );
             results[meal] = res.data.data.filter((f) => f.comments?.trim());
@@ -274,3 +274,4 @@ export default function FeedbackAnalytics() {
     </div>
   );
 }
+
