@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const BASE = import.meta.env.VITE_SERVER_URL || "http://localhost:5000";
+const BASE = import.meta.env.VITE_SERVER_URL || "http://nitc-mess-frontend-flax.vercel.app";
 const API = `${BASE}/api/bills`;
 
 const authHeaders = () => ({
@@ -63,4 +63,5 @@ export const getBillingStats = async (messId) => {
   const year = today.getFullYear();
   
   return axios.get(`${API}/summary/${messId}/${month}/${year}`, authHeaders());
+
 };
