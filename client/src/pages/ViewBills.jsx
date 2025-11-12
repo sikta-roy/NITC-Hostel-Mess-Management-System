@@ -3,12 +3,14 @@ import Navbar from "../components/Navbar.jsx";
 import Sidebar from "../components/Sidebar.jsx";
 import PrimaryButton from "../components/PrimaryButton.jsx";
 import { getMyBills } from "../api/billAPI.js";
+import { useNavigate } from "react-router-dom";
 
 export default function ViewBills() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [loading, setLoading] = useState(true);
   const [bills, setBills] = useState([]);
   const [page, setPage] = useState(1);
+  const navigate = useNavigate();
 
   const fetchBills = async (p = 1) => {
     try {
@@ -76,4 +78,5 @@ export default function ViewBills() {
     </div>
   );
 }
+
 
