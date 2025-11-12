@@ -25,7 +25,6 @@ export default function FeedbackAnalytics() {
         
         const response = await axios.get(
           `${import.meta.env.VITE_SERVER_URL}/api/feedback/statistics?month=${today.getMonth() + 1}&year=${today.getFullYear()}`,
-          `http://localhost:5000/api/feedback/statistics?month=${today.getMonth() + 1}&year=${today.getFullYear()}`,
           {
             headers: { Authorization: `Bearer ${token}` }
           }
@@ -221,4 +220,5 @@ export default function FeedbackAnalytics() {
     </div>
   );
 }
+
 
