@@ -69,10 +69,11 @@ export default function ViewBills() {
         {/* Quick action */}
         {pendingExists && (
           <div className="mt-8 flex justify-end">
-            <PrimaryButton onClick={() => window.location.href = "/pay-pending"}>Pay Pending Bills</PrimaryButton>
+            <PrimaryButton onClick={() => navigate("/pay-pending")}>Pay Pending Bills</PrimaryButton>
           </div>
         )}
       </main>
     </div>
   );
 }
+
