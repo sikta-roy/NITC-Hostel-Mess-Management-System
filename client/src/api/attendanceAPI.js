@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = "http://localhost:5000/api/attendance";
+const API_URL = "http://nitc-mess-frontend-flax.vercel.app/api/attendance";
 
 // Include JWT token from localStorage if you use login
 const getAuthHeaders = () => {
@@ -43,3 +43,4 @@ export const markPresent = async (date) => {
   ];
   return await axios.post(API_URL, { date, meals }, getAuthHeaders());
 };
+
