@@ -13,7 +13,7 @@ export default function Menu() {
   const storedUser = JSON.parse(localStorage.getItem("user"));
   const messId = storedUser?.messId;
 
-  // 🧠 Format backend menu data into frontend display format
+  
   const formatMenu = (menuData) => {
     const formatted = {};
     menuData.dailyMenus.forEach((dayMenu) => {
@@ -27,7 +27,7 @@ export default function Menu() {
     return formatted;
   };
 
-  // 🟢 Fetch current week menu
+  //  Fetch current week menu
   useEffect(() => {
     const fetchMenu = async () => {
       try {
@@ -143,4 +143,5 @@ export default function Menu() {
     </div>
   );
 }
+
 
