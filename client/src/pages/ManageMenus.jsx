@@ -17,7 +17,7 @@ export default function ManageMenus() {
   const token = localStorage.getItem("token");
   const messId = storedUser?.messId;
 
-  // 🧩 Format backend menu into form
+  //   backend menu into form
   const formatMenu = (menuData) => {
     const formatted = {};
     menuData.dailyMenus.forEach((dayMenu) => {
@@ -30,7 +30,7 @@ export default function ManageMenus() {
     return formatted;
   };
 
-  // 🟢 Fetch menus and load current/previous
+  //  Fetch menus and load current/previous
   useEffect(() => {
     const fetchMenus = async () => {
       try {
@@ -96,7 +96,7 @@ export default function ManageMenus() {
     });
   };
 
-  // 🧩 Save or update menu
+  //  Save or update menu
   const handleSave = async () => {
     try {
       setLoading(true);
@@ -254,7 +254,7 @@ export default function ManageMenus() {
           </PrimaryButton>
         </div>
 
-        {/* 🧩 All Menus List */}
+        {/*  All Menus List */}
         <section className="mt-12">
           <h2 className="text-2xl font-bold mb-4">All Menus</h2>
           {menus.length === 0 ? (
@@ -320,4 +320,5 @@ export default function ManageMenus() {
     </div>
   );
 }
+
 
